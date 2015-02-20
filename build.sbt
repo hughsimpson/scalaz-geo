@@ -24,8 +24,8 @@ scalacOptions <++= (scalaVersion) map { sv =>
 libraryDependencies <++= (scalaVersion) { sv =>
   val scalazSpecsVersion = if(sv startsWith "2.9") "0.1.5" else "0.2"
   Seq(
-    "org.scalaz"     %% "scalaz-core"   % "7.0.6",
-    "org.typelevel"  %% "scalaz-specs2" % scalazSpecsVersion % "test"
+    "org.scalaz"     %% "scalaz-core"   % "7.1.1",
+    "org.typelevel"  %% "scalaz-specs2" % "0.3.0" % "test"
   )
 }
 

@@ -3,6 +3,7 @@ package geo
 
 import scalaz._
 import std.tuple._
+import scalaz.std.anyVal._
 
 sealed trait GeodeticCurve {
   val ellipsoidalDistance: Double

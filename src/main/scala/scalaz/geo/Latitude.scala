@@ -1,6 +1,8 @@
 package scalaz.contrib
 package geo
 
+import scalaz.std.anyVal._
+
 sealed trait Latitude {
   val value: Double
 

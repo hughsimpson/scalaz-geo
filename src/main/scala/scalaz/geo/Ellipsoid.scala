@@ -1,6 +1,8 @@
 package scalaz.contrib
 package geo
 
+import scalaz.std.anyVal._
+import scalaz.std.tuple._
 
 sealed trait Ellipsoid {
   val semiMajor: Double // metres
