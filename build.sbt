@@ -4,11 +4,11 @@ organization := "org.scalaz.geo"
 
 name := "scalaz-geo"
 
-version := "0.1-SNAPSHOT"
+version := "0.2"
 
-scalaVersion := "2.10.4"
+scalaVersion := "2.11.6"
 
-crossScalaVersions := Seq("2.9.2", "2.9.3", "2.10.4", "2.11.2")
+crossScalaVersions := Seq("2.9.2", "2.9.3", "2.10.4", "2.11.6")
 
 scalacOptions <++= (scalaVersion) map { sv =>
   val versionDepOpts =
