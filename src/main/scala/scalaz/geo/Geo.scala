@@ -1,5 +1,4 @@
-package scalaz.contrib
-package geo
+package scalaz.contrib.geo
 
 object Geo extends Azimuths
         with Bearings
