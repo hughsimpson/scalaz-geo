@@ -1,8 +1,16 @@
+organization := "silasmariner"
+
 name := "scalaz-geo"
 
-version := "0.3.0-SNAPSHOT"
+version := "0.3.0"
 
 scalaVersion := "2.11.8"
+
+bintrayOrganization := Some("silasmariner")
+
+bintrayOmitLicense := true
+
+publishMavenStyle := true
 
 scalacOptions <++= (scalaVersion) map { sv =>
   val versionDepOpts =
@@ -15,6 +23,10 @@ scalacOptions <++= (scalaVersion) map { sv =>
   Seq("-unchecked") ++ versionDepOpts
 }
 
+resolvers += Resolver.sonatypeRepo("releases")
+
+resolvers += Resolver.jcenterRepo
+
 libraryDependencies <++= (scalaVersion) { sv =>
   val scalazSpecsVersion = if(sv startsWith "2.9") "0.1.5" else "0.2"
   Seq(
@@ -23,13 +35,3 @@ libraryDependencies <++= (scalaVersion) { sv =>
     "org.typelevel" %% "scalaz-specs2" % "0.3.0" % "test"
   )
 }
-
-resolvers += Resolver.sonatypeRepo("releases")
-
-publishMavenStyle := true
-
-organization := "silasmariner"
-
-bintrayOrganization := Some("silasmariner")
-
-bintrayOmitLicense := true
